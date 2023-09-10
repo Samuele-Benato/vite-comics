@@ -1,0 +1,25 @@
+// VARIABLES
+@use "./partials/variables" as *;
+// MIXINS
+@use "./partials/mixins" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  min-width: 700px;
+  margin: 0 auto;
+}
+
+li {
+  list-style-type: none;
+  a {
+    text-decoration: none;
+    color: #848184;
+  }
+}
