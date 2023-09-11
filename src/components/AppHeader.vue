@@ -62,6 +62,10 @@ export default {
       link.active == true;
     },
   },
+
+  props: {
+    slogan: String,
+  },
 };
 </script>
 
@@ -73,9 +77,9 @@ export default {
       </div>
       <ul>
         <li
-          @click="linkActive(link)"
-          :class="link.active ? 'active-line' : ''"
           v-for="link in linksH"
+          :class="link.active ? 'active-line' : ''"
+          @click="linkActive(link)"
         >
           <a :href="link.url">{{ link.name }}</a>
         </li>

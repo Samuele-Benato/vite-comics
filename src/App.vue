@@ -1,17 +1,30 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
+import AppIconBanner from "./components/AppIconBanner.vue";
 import AppFooterTop from "./components/AppFooterTop.vue";
 import AppFooterBottom from "./components/AppFooterBottom.vue";
 
 export default {
-  components: { AppHeader, AppMain, AppFooterTop, AppFooterBottom },
+  data() {
+    return {
+      sloganPaperino: "",
+    };
+  },
+  components: {
+    AppHeader,
+    AppMain,
+    AppIconBanner,
+    AppFooterTop,
+    AppFooterBottom,
+  },
 };
 </script>
 
 <template>
-  <AppHeader />
+  <AppHeader :slogan="sloganPaperino" />
   <AppMain />
+  <AppIconBanner />
   <AppFooterTop />
   <AppFooterBottom />
 </template>

@@ -38,11 +38,16 @@ export default {
   <footer>
     <div class="container">
       <div class="footer-button">
-        <span>SIGN-UP NOW!</span>
+        <a>SIGN-UP NOW!</a>
       </div>
       <ul>
         <li><span>FOLLOW US</span></li>
-        <li @click="" :class="link.active ? '' : ''" v-for="link in linksF">
+        <li
+          @click=""
+          :class="link.active ? '' : ''"
+          v-for="link in linksF"
+          :key="link.url"
+        >
           <a :href="link.url">
             <img :src="link.url" alt="social network icon" />
           </a>
