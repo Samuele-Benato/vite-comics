@@ -1,32 +1,48 @@
 <script>
+import AppCard from "./AppCard.vue";
 export default {
   data() {
-    return {
-      title: "Content",
-    };
+    return {};
+  },
+  props: {
+    cards: Array,
+  },
+  components: {
+    AppCard,
   },
 };
 </script>
 
 <template>
+  <div class="jumbotron"></div>
   <main>
     <div class="container">
-      <div>{{ title }}</div>
+      <ul>
+        <li><AppCard :cards="dcCards" /></li>
+      </ul>
+      <button>LOAD MORE</button>
     </div>
   </main>
 </template>
 
 <style lang="scss" scoped>
 @use "../assets/styles/partials/mixins" as *;
+.jumbotron {
+  height: 300px;
+}
 main {
-  margin-top: 100px;
-  background-color: grey;
-  min-height: 100px;
+  background-color: #191919;
   .container {
-    height: 100%;
-    div {
-      height: 100%;
-      @include center("center");
+    text-align: center;
+    button {
+      padding: 10px 25px;
+      border-radius: 5px;
+      border: none;
+      background-color: #2883fa;
+      color: white;
+      font-weight: 700;
+      font-size: 0.5rem;
+      margin: 1rem;
     }
   }
 }

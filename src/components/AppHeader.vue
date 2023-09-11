@@ -62,10 +62,6 @@ export default {
       link.active == true;
     },
   },
-
-  props: {
-    slogan: String,
-  },
 };
 </script>
 
