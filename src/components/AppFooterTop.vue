@@ -76,6 +76,7 @@ export default {
 footer {
   max-height: 300px;
   background-image: url("/img/footer-bg.jpg");
+
   .container {
     @include center("between");
     .col60 {

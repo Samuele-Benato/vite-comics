@@ -1,24 +1,39 @@
 <script>
 export default {
   props: {
-    cards: Array,
+    card: Object,
   },
 };
 </script>
 
 <template>
-  <figure v-for="(card, index) in cards" :key="index" class="card">
+  <figure class="card">
     <div class="image-container">
       <img :src="card.thumb" alt="film mignature" />
     </div>
     <figcaption>{{ card.series }}</figcaption>
-    <figcaption>{{ card.type }} {{ card.price }}</figcaption>
+    <figcaption>{{ card.type }}</figcaption>
+    <figcaption>Price : {{ card.price }}</figcaption>
   </figure>
 </template>
 
 <style lang="scss" scoped>
 @use "../assets/styles/partials/mixins" as *;
 .card {
-  width: calc(100% / 6);
+  &:hover {
+    scale: 1.2;
+  }
+  .image-container {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  figcaption {
+    color: white;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
 }
 </style>

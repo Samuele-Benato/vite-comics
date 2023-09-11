@@ -51,15 +51,15 @@ export default {
         {
           name: "SHOP",
           url: "#",
-          active: true,
+          active: false,
         },
       ],
       urlLogo: "/img/dc-logo.png",
     };
   },
   methods: {
-    linkActive(link) {
-      link.active == true;
+    linkActive(index) {
+      this.linksH[index].active = true;
     },
   },
 };
@@ -73,9 +73,9 @@ export default {
       </div>
       <ul>
         <li
-          v-for="link in linksH"
+          v-for="(link, index) in linksH"
           :class="link.active ? 'active-line' : ''"
-          @click="linkActive(link)"
+          @click="linkActive(index)"
         >
           <a :href="link.url">{{ link.name }}</a>
         </li>
