@@ -14,7 +14,9 @@ export default {
 </script>
 
 <template>
-  <div class="jumbotron"></div>
+  <div class="jumbotron">
+    <span>CURRENT SERIES</span>
+  </div>
   <main>
     <div class="container">
       <ul>
@@ -36,13 +38,23 @@ export default {
   background-image: url("/img/jumbotron.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  img {
-    width: 100%;
-    max-height: 100%;
+  span {
+    position: absolute;
+    bottom: -7%;
+    left: 15%;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2883fa;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 1rem;
   }
 }
 main {
   background-color: #191919;
+  padding-top: 2rem;
   .container {
     text-align: center;
     ul {
@@ -62,7 +74,7 @@ main {
       background-color: #2883fa;
       color: white;
       font-weight: 700;
-      font-size: 0.5rem;
+      font-size: 0.7rem;
       margin: 1rem;
     }
   }
