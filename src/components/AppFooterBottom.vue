@@ -43,7 +43,9 @@ export default {
       <ul>
         <li><span>FOLLOW US</span></li>
         <li @click="" :class="link.active ? '' : ''" v-for="link in linksF">
-          <a :href="link.url"></a>
+          <a :href="link.url">
+            <img :src="link.url" alt="social network icon" />
+          </a>
         </li>
       </ul>
     </div>
@@ -67,8 +69,16 @@ footer {
     }
     ul {
       @include center();
-      span {
-        color: #2883fa;
+      li {
+        span {
+          color: #2883fa;
+          padding-right: 0.5rem;
+        }
+      }
+      li {
+        a {
+          padding: 0.5rem;
+        }
       }
     }
   }
