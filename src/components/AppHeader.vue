@@ -2,7 +2,7 @@
 export default {
   data() {
     return {
-      links: [
+      linksH: [
         {
           name: "CHARACTERS",
           url: "#",
@@ -75,7 +75,7 @@ export default {
         <li
           @click="linkActive(link)"
           :class="link.active ? 'active-line' : ''"
-          v-for="link in links"
+          v-for="link in linksH"
         >
           <a :href="link.url">{{ link.name }}</a>
         </li>
@@ -116,6 +116,7 @@ header {
   height: 100px;
   background-color: white;
   position: fixed;
+  z-index: 1;
 
   left: 0;
   top: 0;

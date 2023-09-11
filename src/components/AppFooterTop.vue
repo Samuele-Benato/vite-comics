@@ -57,13 +57,15 @@ export default {
       <div class="col60">
         <ul v-for="link in links">
           <li>
-            {{ link.title }}
+            <h3>
+              {{ link.title }}
+            </h3>
             <a v-for="link in link.subLink" href="#">{{ link }}</a>
           </li>
         </ul>
       </div>
       <div class="col40">
-        <img src="public/img/dc-logo-bg.png" alt="" />
+        <img src="/img/dc-logo-bg.png" alt="" />
       </div>
     </div>
   </footer>
@@ -78,6 +80,19 @@ footer {
     @include center("between");
     .col60 {
       width: 60%;
+      display: flex;
+      flex-wrap: wrap;
+      ul {
+        padding: 0 1rem;
+        width: calc(100% / 3);
+        li {
+          display: flex;
+          flex-direction: column;
+          h3 {
+            color: white;
+          }
+        }
+      }
     }
     .col40 {
       width: 40%;
